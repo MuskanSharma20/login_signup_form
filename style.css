@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 630px;
+    background-image: url("https://images.unsplash.com/photo-1661559058203-19441b3fdc08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80");
+    background-repeat: no-repeat;
+    background-size: 100% 119%;
+}
+
+.wrapper {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 45px;
+    padding: 55px;
+    box-shadow: 14px 12px 20px #cdb4b4;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    width: 220%;
+}
+
+.titleContainer .title {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 800px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.wrapper .formContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.formContainer .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 30px 0 10px;
+    justify-content: space-between;
+    border: 1px solid rgb(91, 94, 88);
+
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 52px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.slide-controls .slide-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+    background: -webkit-linear-gradient(left, rgb(252, 110, 63), hsl(63, 67%, 88%));
+}
+input[type="radio"]{
+    display: none;
+}
+
+#signup:checked ~ .slide-tab{
+    left: 50%;
+}
+
+#signup:checked ~ .login{
+    color: black;
+}
+
+
+#signup:checked ~ .signup{
+    color: aliceblue;
+}
+.slide-controls .signup {
+    color: black;
+}
+
+.formContainer .formInner {
+    display: flex;
+    width: 200%;
+}
+
+.formContainer .formInner form {
+    width: 50%;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+    
+}
+
+.formContainer .formInner form .field {
+    height: 40px;
+    margin-top: 20px;
+}
+
+.formInner form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    border-radius: 6px;
+    border: 1px solid rgb(205, 172, 172);
+    border-bottom-width: 4px;
+    transition: all 0.4s ease;
+}
+
+.formInner .pass-link a {
+    text-decoration: none;
+    color: rgb(66, 63, 63);
+
+}
+
+
+.pass-link {
+    margin-top: 6px;
+}
+
+.signup-link {
+    margin-top: 26px;
+}
+
+.signup-link a {
+    color: rgb(227, 4, 4);
+    text-decoration: none;
+
+}
+
+.pass-link a:hover,
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+form .field input[type="submit"] {
+    color: rgba(254, 255, 255, 0.993);
+    background: -webkit-linear-gradient(left, rgb(30, 32, 57), hsl(258, 9%, 58%));
+}
